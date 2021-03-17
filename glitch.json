@@ -1,0 +1,21 @@
+{
+  "install": "pip3 install --user -r rqs.txt",
+  "start": "PYTHONUNBUFFERED=true python3 main.py",
+  "watch": {
+    "ignore": [
+      "\\.pyc$"
+    ],
+    "install": {
+      "include": [
+        "^rqs\\.txt$"
+      ]
+    },
+    "restart": {
+      "include": [
+        "\\.py$",
+        "^start\\.sh"
+      ]
+    },
+    "throttle": 1000
+  }
+}
